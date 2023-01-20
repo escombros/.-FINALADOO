@@ -13,7 +13,7 @@ if(token)
 axios.defaults.headers.common['Authorization']= 'Beaarer ' + token ;
 
 
-axios.defaults.baseURL = "http://api-tecwebprod.escomproyectos.com/api/";
+axios.defaults.baseURL = "http://apiadoo.escomproyectos.com/api/";
 const app = createApp(App)
 app.component('vue-simple-context-menu', VueSimpleContextMenu);
 installElementPlus(app)
