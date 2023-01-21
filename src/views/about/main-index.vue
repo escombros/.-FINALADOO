@@ -51,7 +51,30 @@
     </el-row >
   </div>
 <div class="contenedorbody">
+<!----->
+<el-row class="margin-bottom-2 margin-top-2"  >
 
+  <el-col :span="20" :offset="2"> 
+<el-table :data="tableData" style="width: 100%">
+    <el-table-column fixed prop="date" label="FOLIO" width="150" />
+    <el-table-column prop="name" label="FISCALÍA" width="120" />
+    <el-table-column prop="city" label="NOMBRE" width="120" />
+    <el-table-column prop="address" label="PATERNO" width="120" />
+    <el-table-column prop="zip" label="MATERNO" width="120" />
+    <el-table-column prop="state" label="TIPO VÍCTIMA" width="170" />
+    <el-table-column fixed="right" label="Status" width="120">
+      <template #default>
+        <el-button link type="primary" size="small" @click="handleClick()"
+          >Detail</el-button
+        >
+        <el-button link type="primary" size="small">Edit</el-button>
+      </template>
+    </el-table-column>
+  </el-table>
+</el-col>
+</el-row>
+
+<!----->
 </div>
 <div>
 <br><br>
@@ -64,6 +87,7 @@
 </div>
 
  </template>
+ 
 <script>
 import axios from 'axios'
 export default{
@@ -154,6 +178,52 @@ export default{
   }
 
 }
+
+
+const handleClick = () => {
+  console.log('click')
+}
+
+const tableData = [
+  {
+    date: '2016-05-03',
+    name: 'Tom',
+    state: 'California',
+    city: 'Los Angeles',
+    address: 'No. 189, Grove St, Los Angeles',
+    zip: 'CA 90036',
+    tag: 'Home',
+  },
+  {
+    date: '2016-05-02',
+    name: 'Tom',
+    state: 'California',
+    city: 'Los Angeles',
+    address: 'No. 189, Grove St, Los Angeles',
+    zip: 'CA 90036',
+    tag: 'Office',
+  },
+  {
+    date: '2016-05-04',
+    name: 'Tom',
+    state: 'California',
+    city: 'Los Angeles',
+    address: 'No. 189, Grove St, Los Angeles',
+    zip: 'CA 90036',
+    tag: 'Home',
+  },
+  {
+    date: '2016-05-01',
+    name: 'Tom',
+    state: 'California',
+    city: 'Los Angeles',
+    address: 'No. 189, Grove St, Los Angeles',
+    zip: 'CA 90036',
+    tag: 'Office',
+  },
+]
+
+
 </script>
 <style>
 <style>

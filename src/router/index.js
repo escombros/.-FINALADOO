@@ -22,9 +22,21 @@ const routes = [
     hidden: true
   },
   {
+    path: '/preData',
+    name: 'preData',
+    component: () => import('@/views/preData/main-index'),
+    hidden: true
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('@/views/about/main-index'),
+    hidden: true
+  },
+  {
+    path: '/ejemplo',
+    name: 'ejemplo',
+    component: () => import('@/views/respaldo/main-index copy'),
     hidden: true
   },
   {

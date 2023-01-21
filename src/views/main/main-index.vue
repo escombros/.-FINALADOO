@@ -5,7 +5,7 @@
          <el-button
              class="header-logo "
              color="#626aef"
-             @click.stop.prevent="hola()"
+             @click.stop.prevent="fnPrueba()"
            >
            <img class="logo-mex"  src="@/assets/images/logo.svg" alt="Logo">
          </el-button>
@@ -181,6 +181,12 @@
        },
        async gotoLogin(){
         this.$router.push({ name: 'login'})
+      },
+       async fnPrueba(){
+        this.$router.push({ name: 'ejemplo'})
+      },
+       async preData(){
+        this.$router.push({ name: 'preData'})
       },
         async gotoReguster(){
           this.$router.push({ name: 'register'})
